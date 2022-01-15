@@ -1,0 +1,18 @@
+{
+  "name": "jest-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/mikejdegroot/jest-testing",
+  "author": "Mike de Groot - Remote <mike@entwurf.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "jest": "^27.4.7"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
