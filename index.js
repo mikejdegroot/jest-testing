@@ -8,24 +8,23 @@ export const duplicateValue = (a) => {
 };
 
 const mockApi = async () => {
-  let time = 0;
+  let data = "nothing";
   await new Promise((resolve) =>
     setTimeout(() => {
-      time = 10;
+      data = "api data";
       resolve();
     }, 3000)
   );
-  return time;
+  return data;
 };
 
 export const fetchData = async () => {
-  console.log("1");
   try {
     const data = await mockApi();
-    console.log("2");
-    console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
+    throw err.toString();
   }
 };
 

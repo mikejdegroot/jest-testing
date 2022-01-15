@@ -1,4 +1,4 @@
-import { sum, duplicateValue } from "./index.js";
+import { sum, duplicateValue, fetchData } from "./index.js";
 
 test("should provide the sum of 2 values", () => {
   expect(sum(1, 2)).toBe(3); // no need to import these
@@ -33,4 +33,17 @@ describe("duplication", () => {
   //   const testObj = { id: "1", name: "mike" };
   //   expect(duplicateValue(testObj)).toBe(testObj);
   // });
+});
+
+// async code
+// using async / await to wait for the Promise to be returned
+test("should fetch await data from mock api", async () => {
+  const data = await fetchData();
+  expect(data).toBe("api data");
+});
+
+// promise
+test("should promise resolve", () => {
+  // use resolves for older promise syntax. must return the expects for this to work
+  return expect(fetchData()).resolves.toBe("api data");
 });
