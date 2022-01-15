@@ -1,5 +1,8 @@
-const sum = (a, b) => {
+export const sum = (a, b) => {
   return a + b;
 };
 
-export default sum;
+export const duplicateValue = (a) => {
+  const b = a;
+  return b;
+};
